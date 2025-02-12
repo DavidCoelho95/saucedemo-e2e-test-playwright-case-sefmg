@@ -28,7 +28,7 @@ jobs:
       run: npx playwright install
 
     - name: Install additional dependencies
-      run: sudo apt-get install -y \
+      run: sudo apt-get update && sudo apt-get install -y \
         libnss3 \
         libatk1.0-0 \
         libatk-bridge2.0-0 \
