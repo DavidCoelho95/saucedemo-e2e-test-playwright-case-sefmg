@@ -8,6 +8,6 @@ export class InventoryPage {
   }
 
   async goToCart() {
-    await this.page.click('.shopping_cart_link');
+    await this.page.click('[data-test="shopping-cart-link"]');
   }
 }

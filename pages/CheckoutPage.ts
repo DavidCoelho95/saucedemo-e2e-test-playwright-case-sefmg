@@ -4,21 +4,21 @@ export class CheckoutPage {
   constructor(private page: Page) {}
 
   async fillInformation(firstName: string, lastName: string, postalCode: string) {
-    await this.page.fill('#first-name', firstName);
-    await this.page.fill('#last-name', lastName);
-    await this.page.fill('#postal-code', postalCode);
+    await this.page.fill('[data-test="firstName"]', firstName);
+    await this.page.fill('[data-test="lastName"]', lastName);
+    await this.page.fill('[data-test="postalCode"]', postalCode);
   }
 
   async completeCheckout() {
-    await this.page.click('#continue');
-    await this.page.click('#finish');
+    await this.page.click('[data-test="continue"]');
+    await this.page.click('[data-test="finish"]');
   }
 
   async getCompleteHeader() {
-    return this.page.textContent('.complete-header');
+    return this.page.textContent('[data-test="complete-header"]');
   }
   
   async clickBackHome() {
-    await this.page.click('#back-to-products');
+    await this.page.click('[data-test="back-to-products"]');
   }
 }

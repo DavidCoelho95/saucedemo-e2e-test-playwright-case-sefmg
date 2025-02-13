@@ -9,6 +9,6 @@ export class CartPage {
   }
 
   async checkout() {
-    await this.page.click('#checkout');
+    await this.page.click('[data-test="checkout"]');
   }
 }
