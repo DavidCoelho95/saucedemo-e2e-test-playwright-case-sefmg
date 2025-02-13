@@ -25,7 +25,7 @@ test.describe("CheckoutPage", () => {
 
     await cartPage.checkout();
 
-    await checkoutPage.fillInformation("John", "Doe", "12345");
+    await checkoutPage.fillInformation("Paulo", "Coelho", "12345");
     await checkoutPage.completeCheckout();
 
     const completeHeader = await checkoutPage.getCompleteHeader();
